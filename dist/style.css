@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 :root {
   --font-color: #eee;
@@ -8,6 +8,7 @@
   --background-solid-hover: rgb(40, 25, 21);
   --background-dark: rgba(0, 0, 0, 0.9);
   --menu-item-solid-hover: rgba(40, 25, 21, 0.95);
+  --footer-bg-color: #5d4035;
 }
 
 *,
@@ -24,7 +25,7 @@ html {
 }
 
 body {
-  font-family: 'Montserrat', cursive;
+  font-family: 'Poppins', sans-serif;
   font-size: 1.6rem;
   color: var(--font-color);
   background-image: url('images/cafe-background.gif');
@@ -108,11 +109,8 @@ button {
 
 .main {
   max-width: 900px;
-  padding: 4rem;
   margin: 6rem 0;
   font-size: 2rem;
-  background-color: var(--background-light);
-  border: 1px solid var(--border-color);
   border-radius: 15px;
 }
 
@@ -123,6 +121,8 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: var(--background-dark);
+  border-radius: 15px;
   width: 618px;
   animation: fadeIn 1.5s;
 }
@@ -146,6 +146,8 @@ button {
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 4rem;
   animation: fadeIn 1.5s;
+  background-color: hsla(6, 56%, 24%, 0.9);
+  border-radius: 15px;
 }
 
 .menu-item {
@@ -187,10 +189,12 @@ button {
 .contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  width: 618px;
+  width: 800px;
   animation: fadeIn 1.5s;
+  background-color: #006241;
+  padding: 50px 0 20px 0;
+  border-radius: 15px;
 }
 
 .contact p {
@@ -204,10 +208,49 @@ button {
   opacity: 90%;
 }
 
+.phone-container {
+  display: flex;
+  padding-left: 10rem; /*! for media query*/
+}
+
+.phone-container > i {
+  display: flex;
+  align-items: center;
+}
+
+.fa-phone {
+  font-size: 30px;
+  color: hsl(120, 100%, 65%);
+}
+
+.fa-location-dot {
+  font-size: 30px;
+  color: hsl(0, 100%, 67%);
+}
+
+.address-container {
+  display: flex;
+  align-items: center;
+  padding-left: 10rem;
+}
+
+.fa-solid {
+  font-weight: 400;
+}
+
+.address-container {
+  display: flex;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px; 
+}
+
 #map {
   border: 2px solid #0e0504;
   border-radius: 15px;
-
 }
 
 /* Footer */
@@ -218,9 +261,9 @@ button {
   justify-content: center;
   gap: 1rem;
   width: 100%;
+  min-height: 100px;
   padding: 1rem;
-  border-top: 1px solid var(--border-color);
-  background-color: var(--background-light);
+  background-color: var(--footer-bg-color);
 }
 
 .fa-github {
@@ -278,8 +321,16 @@ button {
     width: 50%;
   }
 
+  .phone-container {
+    padding-left: 2rem;
+  }
+
+  .address-container {
+    padding-left: 2rem;
+  }
+
   #map {
-    width: 500px;
+    width: 520px;
     border-radius: 15px;
   }
 
@@ -295,7 +346,7 @@ button {
   }
 
   #map {
-    width: 400px;
+    width: 500px;
     border-radius: 15px;
   }
 }

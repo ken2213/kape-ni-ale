@@ -80,7 +80,7 @@ function createFooter() {
   footer.classList.add("footer");
 
   const copyright = document.createElement('p');
-  copyright.textContent = `Copyright © ${new Date().getFullYear} kenneth`;
+  copyright.textContent = `Made with 💗 Kenneth`;
 
   const githubLink = document.createElement('a');
   githubLink.href = "https://github.com/ken2213";
@@ -88,6 +88,10 @@ function createFooter() {
   const githubIcon = document.createElement('i');
   githubIcon.classList.add("fab");
   githubIcon.classList.add("fa-github");
+
+  githubLink.appendChild(githubIcon);
+  footer.appendChild(copyright);
+  footer.appendChild(githubLink);
 
   return footer;
 }
